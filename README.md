@@ -20,13 +20,13 @@ The whole system has been divided into various stages :<br>
 4.The most important part the contour identification stage<br>
 5. Finding convexity defects and contour areas<br>
 6.Identifying the gesture shown based on the contour areas and ratio<br>
-<img src = "https://github.com/Hemant1704/HANDBYE-PROJECT/blob/master/gesture_images/architecture.JPG" height = 300px width = 900px>
+<img src = "https://github.com/ThisisRitikRao/Hand-Gestures-Recognition/blob/master/gesture_images/architecture.JPG" height = 300px width = 900px>
 <h2>Various stages involved</h2>
 <p>Architecture diagram/ Flow diagram describes the different modules and process
 involved in this project and how they are arranged.
 The flow diagram given below shows the steps or tasks done to make a complete hand
 gesture recognition project</p>
-<img src = "https://github.com/Hemant1704/HANDBYE-PROJECT/blob/master/gesture_images/flowchart.JPG" height = 400px width = 550px>
+<img src = "https://github.com/ThisisRitikRao/Hand-Gestures-Recognition/blob/master/gesture_images/flowchart.JPG" height = 400px width = 550px>
 <h2> Detailed description of modules</h2>
 <h3>1.Image Frame Acquisition</h3>
 <p>
@@ -45,7 +45,7 @@ colour red, green, and blue.
 For this a mask needs to be created which will segment the hand from the background.
 The upper and lower skin colour range are used for the identification of hand. Than
 the mask is created through this range using <b>cv2.inRange()</b> 
-<img src = "https://github.com/Hemant1704/HANDBYE-PROJECT/blob/master/gesture_images/hand_segment.JPG" height = 200px width = 350px><br>
+<img src = "https://github.com/ThisisRitikRao/Hand-Gestures-Recognition/blob/master/gesture_images/hand_segment.JPG" height = 200px width = 350px><br>
 Functions used:<br>
 <b>
 lower_skin =
@@ -97,12 +97,12 @@ defects = cv2.convexityDefects(approx, hull)<br></b>
 
 Given a set of points in the plane. the convex hull of the set is the smallest convex
 polygon that contains all the points of it.
-<img src = "https://github.com/Hemant1704/HANDBYE-PROJECT/blob/master/gesture_images/contour.JPG" height = 150px width = 350px><br>
+<img src = "https://github.com/ThisisRitikRao/Hand-Gestures-Recognition/blob/master/gesture_images/contour.JPG" height = 150px width = 350px><br>
 Thus in this step a boundary or overlapping object kind of thing is being made and
 then the convexity defects are find out which are like gaps between the fingers and I
 draw a dot kind of structure representing different different numbers taking contour
 area also In consideration.<br><br>
-<img src = "https://github.com/Hemant1704/HANDBYE-PROJECT/blob/master/gesture_images/contour2.JPG" height = 200px width = 400px><br>
+<img src = "https://github.com/ThisisRitikRao/Hand-Gestures-Recognition/blob/master/gesture_images/contour2.JPG" height = 200px width = 400px><br>
 </p>
 
 <h3>6.Identifying gesture</h3>
@@ -110,7 +110,7 @@ area also In consideration.<br><br>
 At last for every defect we calculate some angles between the fingers and the number
 of defects which is used for identifying the gesture. Based on different different values
 of the output parameters like area of the contour we classify the input getures.</p>
-<img src = "https://github.com/Hemant1704/HANDBYE-PROJECT/blob/master/gesture_images/gesture.JPG" height = 200px width = 300px>
+<img src = "https://github.com/ThisisRitikRao/Hand-Gestures-Recognition/blob/master/gesture_images/gesture.JPG" height = 200px width = 300px>
 
 <h2> Software Requirments</h3>
 <p>
@@ -137,5 +137,5 @@ makes it easier to integrate with other libraries that use Numpy such as <b>SciP
 Matplotlib.</b>
 Also to perform mathematical operations on the images we will need to <b>import the
 math module</b> present in python which also has certain functions like sqrt abs and other.
-<img src = "https://github.com/Hemant1704/HANDBYE-PROJECT/blob/master/gesture_images/softw_req.JPG" height = 250px width = 680px>
+<img src = "https://github.com/ThisisRitikRao/Hand-Gestures-Recognition/blob/master/gesture_images/softw_req.JPG" height = 250px width = 680px>
 </p>
